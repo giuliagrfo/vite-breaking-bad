@@ -1,7 +1,17 @@
-@use '../node_modules/bootstrap/scss/bootsrap.scss';
+@use '../node_modules/bootstrap/scss/bootstrap.scss';
+@use './partials/variables' as*;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: $primary;
+  color: $light;
+}
+
+img {
+  max-width: 100%;
 }
