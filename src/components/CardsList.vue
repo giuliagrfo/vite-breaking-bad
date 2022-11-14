@@ -44,9 +44,9 @@ export default {
         color: $light;
     }
 
-    // .list {
-    //     padding: 2rem;
-    // }
+    .list {
+        justify-content: center;
+    }
 
 
 }

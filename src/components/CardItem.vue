@@ -30,6 +30,7 @@ export default {
     border-radius: 0;
     padding: 1rem;
     text-align: center;
+    margin: 1rem;
 
     h4 {
         color: $light;
