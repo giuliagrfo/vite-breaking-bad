@@ -15,7 +15,7 @@ export default {
             <div class="dropdown">
                 <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
-                    Dropdown Button
+                    Select Category
                 </button>
                 <div class="dropdown-menu">
                     <button class="dropdown-item" href="#">Action</button>

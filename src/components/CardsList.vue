@@ -42,12 +42,14 @@ export default {
         padding: 1rem;
         margin: 1rem 0;
         color: $light;
+
+        h6 {
+            margin: 0;
+        }
     }
 
     .list {
         justify-content: center;
     }
-
-
 }
 </style>

@@ -20,11 +20,8 @@ export default {
       axios.get(url)
         .then(response => {
           console.log(response);
-
           this.store.characters = response.data
-          // this.store.status = response.data.status
         })
-
     }
   },
   mounted() {
