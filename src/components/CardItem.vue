@@ -16,14 +16,10 @@ export default {
             <h6>{{ character.status }}</h6>
         </div>
     </div>
-
-
 </template>
 
 <style lang="scss">
 @use '../assets/scss/partials/variables' as*;
-
-
 
 .card {
     background-color: $primary;

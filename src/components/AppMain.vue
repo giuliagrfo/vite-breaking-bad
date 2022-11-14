@@ -6,7 +6,6 @@ export default {
         CardsList
     }
 }
-
 </script>
 
 <template>
@@ -24,7 +23,5 @@ export default {
             </div>
             <CardsList />
         </div>
-
-
     </main>
 </template>
