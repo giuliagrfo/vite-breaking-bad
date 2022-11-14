@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'AppHeader',
+    name: 'AppHeader'
 }
 
 </script>
@@ -27,6 +27,11 @@ export default {
     img {
         width: 60px;
         object-fit: contain;
+    }
+
+    h1 {
+        color: $light;
+
     }
 }
 </style>
