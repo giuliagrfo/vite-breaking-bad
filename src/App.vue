@@ -10,7 +10,7 @@ export default {
   components: {
     AppHeader,
     AppMain,
-    SelectorItem
+    SelectorItem,
   },
   data() {
     return {
