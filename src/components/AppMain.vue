@@ -16,17 +16,21 @@ export default {
     },
     methods: {
         categorySelector() {
-            console.log('Select');
-            console.log(this.store.selector);
+            // console.log('Select');
+            // console.log(this.store.selector);
+            // const url = store.API_URL;
 
             const selector = this.store.selector;
             const url = `${this.store.API_URL}?category=${selector}`;
+            console.log(url);
 
             axios.get(url)
                 .then(response => {
                     console.log(response);
-                    this.store.characters = response.data.results
-                    this.store.info = response.data.info
+                    this.store.characters = response.data
+                })
+                .catch(err => {
+                    console.log(err);
                 })
         }
     }
