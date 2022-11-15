@@ -1,12 +1,34 @@
 <script>
+import { store } from '../store.js/';
 import CardsList from './CardsList.vue';
 import SelectorItem from './SelectorItem.vue';
-
+import axios from 'axios';
 export default {
     name: 'AppMain',
     components: {
         CardsList,
         SelectorItem
+    },
+    data() {
+        return {
+            store
+        }
+    },
+    methods: {
+        categorySelector() {
+            console.log('Select');
+            console.log(this.store.selector);
+
+            const selector = this.store.selector;
+            const url = `${this.store.API_URL}?category=${selector}`;
+
+            axios.get(url)
+                .then(response => {
+                    console.log(response);
+                    this.store.characters = response.data.results
+                    this.store.info = response.data.info
+                })
+        }
     }
 }
 </script>
@@ -14,17 +36,7 @@ export default {
 <template>
     <main id="site_main">
         <div class="container">
-            <!-- <div class="dropdown">
-                <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Select Category
-                </button>
-                <div class="dropdown-menu">
-                    <button class="dropdown-item" href="#">Action</button>
-                    <button class="dropdown-item" href="#">Action</button>
-                </div>
-            </div> -->
-            <SelectorItem />
+            <SelectorItem @selectCategory="categorySelector" />
             <CardsList />
         </div>
     </main>
